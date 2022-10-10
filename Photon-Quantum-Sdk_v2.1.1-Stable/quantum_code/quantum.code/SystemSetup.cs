@@ -23,8 +23,10 @@ namespace Quantum {
         new Core.PlayerConnectedSystem(),
 
         // user systems go here 
+        new TimeSystem(),
         new PlayerSpawnSystem(),
-        new MovementSystem()
+        new MovementSystem(),
+        new PrepareGameSystem()
       };
     }
   }

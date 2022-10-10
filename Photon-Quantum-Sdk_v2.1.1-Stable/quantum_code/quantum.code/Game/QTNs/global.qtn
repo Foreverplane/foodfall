@@ -1,0 +1,5 @@
+global {
+    GameState GameState;
+    FP GameTime;
+    FP ElapsedTime;
+}

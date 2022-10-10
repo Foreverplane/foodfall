@@ -1,0 +1,9 @@
+
+synced event SwitchGameState {
+    GameState TargetState;
+}
+signal SwitchGameState(GameState targetState);
+
+synced event PrepareGame{
+    FP GameStartTime;
+}
