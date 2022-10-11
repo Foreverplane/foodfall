@@ -5,3 +5,10 @@
 component PlayerScore{
     Int32 Score;
 }
+
+component FoodScoreData{
+    Int32 Score;
+}
+
+component FoodDestroyerTag{
+}

@@ -53,47 +53,6 @@ MonoBehaviour:
           RawValue: 65536
       Position:
         X:
-          RawValue: 0
-        Y:
-          RawValue: 0
-        Z:
-          RawValue: 0
-      PhysicsMaterial:
-        Id:
-          Value: 0
-      ShapeType: 2
-      SphereRadius:
-        RawValue: 0
-      BoxExtents:
-        X:
-          RawValue: 3276800
-        Y:
-          RawValue: 32768
-        Z:
-          RawValue: 3276800
-      SmoothSphereMeshCollisions: 0
-      StaticData:
-        Name: BoxStaticCollider
-        Tag: Untagged
-        Layer: 0
-        Asset:
-          Id:
-            Value: 0
-        IsTrigger: 0
-        ColliderIndex: 0
-        MutableMode: 0
-      MutableMode: 0
-    - Rotation:
-        X:
-          RawValue: 0
-        Y:
-          RawValue: 0
-        Z:
-          RawValue: 0
-        W:
-          RawValue: 65536
-      Position:
-        X:
           RawValue: 655360
         Y:
           RawValue: 0
@@ -121,7 +80,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 1
+        ColliderIndex: 0
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -162,8 +121,104 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 2
+        ColliderIndex: 1
         MutableMode: 0
       MutableMode: 0
     MapEntities: []
-  Prototypes: []
+  Prototypes:
+  - FoodDestroyerTag:
+    - _empty_prototype_dummy_field_: 0
+    FoodScoreData: []
+    PlayerLink: []
+    PlayerScore: []
+    Spawner: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D:
+    - Version: 2
+      Config:
+        Value: 59
+      Mass:
+        RawValue: 65536
+      Drag:
+        RawValue: 32768
+      AngularDrag:
+        RawValue: 32768
+      CenterOfMass:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      RotationFreeze:
+        Value: 255
+      GravityScale:
+        _hasValue: 0
+        _value:
+          RawValue: 65536
+    PhysicsCollider2D: []
+    PhysicsCollider3D:
+    - ShapeConfig:
+        ShapeType: 2
+        SphereRadius:
+          RawValue: 0
+        PositionOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        BoxExtents:
+          X:
+            RawValue: 3276800
+          Y:
+            RawValue: 32768
+          Z:
+            RawValue: 3276800
+        RotationOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        UserTag: 0
+        IsPersistent: 1
+        CompoundShapes: []
+        IsSetFromSourceCollider: 1
+      Layer: 0
+      IsTrigger: 0
+      PhysicsMaterial:
+        Id:
+          Value: 0
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D:
+    - CallbackFlags:
+        Value: 0
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []

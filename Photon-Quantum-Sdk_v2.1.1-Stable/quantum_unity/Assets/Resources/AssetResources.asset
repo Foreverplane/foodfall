@@ -51,6 +51,11 @@ MonoBehaviour:
         Id:
           Value: 1710471675203725834
       ResourcePath: DB/Map1
+    - Path: Resources/DB/FoodEntity|EntityView
+      AssetRef:
+        Id:
+          Value: 2355544724083064382
+      ResourcePath: DB/FoodEntity
     - Path: Resources/DB/PlayerEntity|EntityPrototype
       AssetRef:
         Id:
@@ -61,3 +66,18 @@ MonoBehaviour:
         Id:
           Value: 3193928688549920171
       ResourcePath: DB/Map1_mesh
+    - Path: Resources/DB/FoodEntity|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 3628059125458403757
+      ResourcePath: DB/FoodEntity
+    - Path: Resources/DB/BoxStaticCollider|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 3782556960527735691
+      ResourcePath: DB/BoxStaticCollider
+    - Path: Resources/DB/BoxStaticCollider|EntityView
+      AssetRef:
+        Id:
+          Value: 3981705817679480382
+      ResourcePath: DB/BoxStaticCollider

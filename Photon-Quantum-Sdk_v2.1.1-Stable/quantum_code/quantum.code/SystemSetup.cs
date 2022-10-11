@@ -26,7 +26,9 @@ namespace Quantum {
         new TimeSystem(),
         new PlayerSpawnSystem(),
         new MovementSystem(),
-        new PrepareGameSystem()
+        new PrepareGameSystem(),
+        new GameOverSystem(),
+        new PickupSystem()
       };
     }
   }

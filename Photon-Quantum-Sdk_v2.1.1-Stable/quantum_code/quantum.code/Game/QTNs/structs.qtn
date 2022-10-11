@@ -1,0 +1,9 @@
+struct Range{
+    FP Min;
+    FP Max;
+}
+
+component Spawner{
+FP TempRate;
+asset_ref<EntityPrototype> PickupPrototype;
+}
