@@ -1,47 +1,51 @@
 using System;
+using System.Collections.Generic;
 using Photon.Deterministic;
 namespace Quantum.Game;
 
 public unsafe class PickupSystem : SystemMainThread, ISignalOnCollisionEnter3D {
-	private Random _Random = new Random();
-	private FP _SpawnRate;
+	private const int K = 1000;
+	private readonly Random _Random = new Random();
 
-	private FP _SpawnXRange;
-	private FP _SpawnYRange;
-
-	private FP _TempSpawnRate;
-	private EntityPrototype _Asset;
-	private FP _SpawnHeight;
+	private FP _PickupsAmount;
+	private string FoodPath => $"Resources/DB/Food/FoodEntity {_Random.Next(0, _PickupsAmount.AsInt)}|EntityPrototype";
 	public override void OnInit(Frame f) {
-		_SpawnRate = f.RuntimeConfig.SpawnRate;
-		_SpawnXRange = f.RuntimeConfig.SpawnXRange;
-		_SpawnYRange = f.RuntimeConfig.SpawnYRange;
-		_SpawnHeight = f.RuntimeConfig.SpawnHeight;
-		_TempSpawnRate = new FP();
-		_Asset = f.FindAsset<EntityPrototype>("Resources/DB/FoodEntity|EntityPrototype");
+		// Log.Debug("PickupSystem initialized");
+		_PickupsAmount = f.RuntimeConfig.PickupsAmount;
 	}
 
 	public override void Update(Frame f) {
-		_TempSpawnRate += f.DeltaTime;
-		if (_TempSpawnRate >= _SpawnRate) {
-			_TempSpawnRate = 0;
-			// _SpawnRate = _Random.Next(0, _SpawnRate.AsInt);
+		if(!f.IsVerified)
+			return;
+		// Log.Debug($"Frame: {f.Number} v {f.IsVerified} p {f.IsPredicted}");
+		f.Global->TempSpawnTime += f.DeltaTime;
+		if (f.Global->TempSpawnTime >= f.RuntimeConfig.SpawnRate) {
+			f.Global->TempSpawnTime = 0;
 			SpawnPickup(f);
 		}
 	}
 	private void SpawnPickup(Frame frame) {
-		var prototype = _Asset;
+		// Log.Debug("Spawn Pickup");
+		var prototype = frame.FindAsset<EntityPrototype>(FoodPath);
 		var entity = frame.Create(prototype);
+		if (frame.Unsafe.TryGetPointer<PhysicsBody3D>(entity, out var physicsBody3D)) {
+			physicsBody3D->Velocity = FPVector3.Zero;
+			physicsBody3D->AngularVelocity = FPVector3.Zero;
+		}
 		if (frame.Unsafe.TryGetPointer<Transform3D>(entity, out var transform)) {
-			transform->Position.X = _Random.Next(-_SpawnXRange.AsInt * 1000, _SpawnXRange.AsInt * 1000) / 1000;
-			transform->Position.Y = _SpawnHeight + _Random.Next(-_SpawnYRange.AsInt * 1000, _SpawnYRange.AsInt * 1000) / 1000;
+			transform->Position.X = _Random.Next(-frame.RuntimeConfig.SpawnXRange.AsInt * K, frame.RuntimeConfig.SpawnXRange.AsInt * K) / K;
+			transform->Position.Y = frame.RuntimeConfig.SpawnHeight + _Random.Next(-frame.RuntimeConfig.SpawnYRange.AsInt * K, frame.RuntimeConfig.SpawnYRange.AsInt * K) / K;
 		}
 	}
 	public void OnCollisionEnter3D(Frame f, CollisionInfo3D info) {
 		if (!f.Has<FoodScoreData>(info.Entity)) return;
 		if (!f.Has<FoodDestroyerTag>(info.Other)) return;
-		f.Destroy(info.Entity);
-		
-		
+		if (f.DestroyPending(info.Entity)) return;
+		// Log.Debug("Collision");
+		var score = f.Get<FoodScoreData>(info.Entity);
+		if (f.Unsafe.TryGetPointer<PlayerLink>(info.Other, out var link)) {
+			f.Signals.ChangePlayerScore(score.Score, link->Player);
+		}
+		f.Destroy(info.Entity); // TODO: pooling
 	}
 }

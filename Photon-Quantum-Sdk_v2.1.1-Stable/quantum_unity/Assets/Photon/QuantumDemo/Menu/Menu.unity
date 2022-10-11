@@ -4712,10 +4712,24 @@ MonoBehaviour:
     Seed: 0
     Map:
       Id:
-        Value: 0
+        Value: 1710471675203725834
     SimulationConfig:
       Id:
-        Value: 0
+        Value: 5
+    PrepareTime:
+      RawValue: 327680
+    GameTime:
+      RawValue: 3932160
+    PickupsAmount:
+      RawValue: 262144
+    SpawnRate:
+      RawValue: 65536
+    SpawnXRange:
+      RawValue: 327680
+    SpawnYRange:
+      RawValue: 65536
+    SpawnHeight:
+      RawValue: 327680
 --- !u!224 &833318423
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9182,6 +9196,7 @@ MonoBehaviour:
     PlayerPrototype:
       Id:
         Value: 2357332761706826755
+    Nickname: 
 --- !u!4 &1565167105
 Transform:
   m_ObjectHideFlags: 0

@@ -28,7 +28,8 @@ namespace Quantum {
         new MovementSystem(),
         new PrepareGameSystem(),
         new GameOverSystem(),
-        new PickupSystem()
+        new PickupSystem(),
+        new PlayerScoreSystem(),
       };
     }
   }

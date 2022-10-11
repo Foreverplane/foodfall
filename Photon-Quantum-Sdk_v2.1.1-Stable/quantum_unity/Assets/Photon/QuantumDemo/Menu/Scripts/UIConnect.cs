@@ -11,6 +11,7 @@ namespace Quantum.Demo {
     public UI.Dropdown   AppVersionDropdown;
     public UI.InputField Username;
     public UI.Button     ReconnectButton;
+    private static string _SessionID;
 
     private static string LastSelectedRegion {
       get => PlayerPrefs.GetString("Quantum.Demo.UIConnect.LastSelectedRegion", PhotonServerSettings.Instance.AppSettings.FixedRegion);
@@ -18,8 +19,8 @@ namespace Quantum.Demo {
     }
 
     private static string LastUsername {
-      get => PlayerPrefs.GetString("Quantum.Demo.UIConnect.LastUsername", NVJOBNameGen.GiveAName(5));
-      set => PlayerPrefs.SetString("Quantum.Demo.UIConnect.LastUsername", value);
+      get => PlayerPrefs.GetString($"Quantum.Demo.UIConnect.LastUsername.{_SessionID}", NVJOBNameGen.GiveAName(5));
+      set => PlayerPrefs.SetString($"Quantum.Demo.UIConnect.LastUsername.{_SessionID}", value);
     }
 
     public static int LastSelectedAppVersion {
@@ -29,7 +30,7 @@ namespace Quantum.Demo {
 
     protected new void Awake() {
       base.Awake();
-
+      _SessionID = Guid.NewGuid().ToString();
       Username.text = LastUsername;
 
       var appSettings = PhotonServerSettings.Instance.AppSettings;

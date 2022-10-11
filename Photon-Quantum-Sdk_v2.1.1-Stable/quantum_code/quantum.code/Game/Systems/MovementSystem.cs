@@ -9,6 +9,7 @@ public unsafe class MovementSystem : SystemMainThreadFilter<MovementSystem.Filte
 		public PlayerLink* PlayerLink;
 	}
 	public override void Update(Frame f, ref Filter filter) {
+
 		var input = f.GetPlayerInput(filter.PlayerLink->Player);
 		if (input->Jump.WasPressed)
 			filter.CharacterController3D->Jump(f);

@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 5997516132907013947}
   - component: {fileID: 5006266096397306738}
   m_Layer: 0
-  m_Name: FoodEntity
+  m_Name: FoodEntity 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -318,7 +318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prototype:
-    Score: 0
+    Score: 1
 --- !u!114 &-8682773843474401827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,11 +329,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0120b722c3ca5454da1240b65656905f, type: 3}
-  m_Name: FoodEntityEntityPrototype
+  m_Name: FoodEntity 0EntityPrototype
   m_EditorClassIdentifier: 
   Settings:
     Identifier:
-      Path: Resources/DB/FoodEntity|EntityPrototype
+      Path: Resources/DB/Food/FoodEntity 0|EntityPrototype
       Guid:
         Value: 3628059125458403757
   Parent: {fileID: 1710174268706241098}
@@ -347,11 +347,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d5baec4de8d2754a864a680181831e8, type: 3}
-  m_Name: FoodEntityEntityView
+  m_Name: FoodEntity 0EntityView
   m_EditorClassIdentifier: 
   Settings:
     Identifier:
-      Path: Resources/DB/FoodEntity|EntityView
+      Path: Resources/DB/Food/FoodEntity 0|EntityView
       Guid:
         Value: 2355544724083064382
   Parent: {fileID: 5997516132907013947}

@@ -28,7 +28,7 @@ RectTransform:
   m_GameObject: {fileID: 2384353840982310312}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 1545647348147499228}
   m_Father: {fileID: 8084893996303075234}
@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.985}
+  m_AnchoredPosition: {x: 0, y: 0.778}
   m_SizeDelta: {x: 2.445547, y: 0.4422326}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &793700572882754882
@@ -225,8 +225,8 @@ MonoBehaviour:
       Value: 0
   PhysicsBody:
     IsEnabled: 0
-    Version2D: 0
-    Version3D: 0
+    Version2D: 2
+    Version3D: 2
     Config2D: 116
     Config3D: 58
     RotationFreeze: 0
@@ -551,12 +551,12 @@ PrefabInstance:
     - target: {fileID: 7473080240119512036, guid: 61002fa90556e5649ad7e907812a9c22,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7473080240119512036, guid: 61002fa90556e5649ad7e907812a9c22,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7473080240119512036, guid: 61002fa90556e5649ad7e907812a9c22,
         type: 3}
@@ -566,17 +566,17 @@ PrefabInstance:
     - target: {fileID: 7473080240119512036, guid: 61002fa90556e5649ad7e907812a9c22,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 0.4422326
       objectReference: {fileID: 0}
     - target: {fileID: 7473080240119512036, guid: 61002fa90556e5649ad7e907812a9c22,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 2.35
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7473080240119512036, guid: 61002fa90556e5649ad7e907812a9c22,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -0.2211163
       objectReference: {fileID: 0}
     - target: {fileID: 8127396666234182967, guid: 61002fa90556e5649ad7e907812a9c22,
         type: 3}
@@ -686,12 +686,12 @@ PrefabInstance:
     - target: {fileID: 8128407188458981238, guid: 61002fa90556e5649ad7e907812a9c22,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8128407188458981238, guid: 61002fa90556e5649ad7e907812a9c22,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8128407188458981238, guid: 61002fa90556e5649ad7e907812a9c22,
         type: 3}
@@ -701,17 +701,17 @@ PrefabInstance:
     - target: {fileID: 8128407188458981238, guid: 61002fa90556e5649ad7e907812a9c22,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 0.4422326
       objectReference: {fileID: 0}
     - target: {fileID: 8128407188458981238, guid: 61002fa90556e5649ad7e907812a9c22,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8128407188458981238, guid: 61002fa90556e5649ad7e907812a9c22,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -0.2211163
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61002fa90556e5649ad7e907812a9c22, type: 3}
@@ -759,7 +759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Settings:
     Identifier:
-      Path: Resources/DB/PlayerEntity|EntityView
+      Path: Resources/DB/Players/PlayerEntity|EntityView
       Guid:
         Value: 1654094093889087670
   Parent: {fileID: 8084893996303075244}
@@ -777,7 +777,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Settings:
     Identifier:
-      Path: Resources/DB/PlayerEntity|EntityPrototype
+      Path: Resources/DB/Players/PlayerEntity|EntityPrototype
       Guid:
         Value: 2357332761706826755
   Parent: {fileID: 8084893996303075245}

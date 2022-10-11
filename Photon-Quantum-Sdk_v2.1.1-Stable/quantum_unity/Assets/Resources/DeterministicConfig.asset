@@ -17,10 +17,10 @@ MonoBehaviour:
     ChecksumCrossPlatformDeterminism: 0
     LockstepSimulation: 0
     AggressiveSendMode: 0
-    UpdateFPS: 60
-    ChecksumInterval: 60
-    RollbackWindow: 60
-    InputHardTolerance: 8
+    UpdateFPS: 30
+    ChecksumInterval: 0
+    RollbackWindow: 30
+    InputHardTolerance: 6
     InputRedundancy: 3
     InputRepeatMaxDistance: 10
     SessionStartTimeout: 1
@@ -31,7 +31,7 @@ MonoBehaviour:
     TimeScalePingMin: 100
     TimeScalePingMax: 300
     InputDelayMin: 0
-    InputDelayMax: 60
+    InputDelayMax: 30
     InputDelayPingStart: 100
     InputFixedSizeEnabled: 0
     InputFixedSize: 0

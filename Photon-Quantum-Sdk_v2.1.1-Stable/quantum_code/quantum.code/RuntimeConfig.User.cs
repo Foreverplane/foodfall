@@ -5,7 +5,7 @@ namespace Quantum {
   partial class RuntimeConfig {
 	  public FP PrepareTime;
 	  public FP GameTime;
-	  
+	  public FP PickupsAmount;
 	  public FP SpawnRate;
 	  public FP SpawnXRange;
 	  public FP SpawnYRange;
@@ -19,6 +19,7 @@ namespace Quantum {
 		  stream.Serialize(ref SpawnXRange);
 		  stream.Serialize(ref SpawnYRange);
 		  stream.Serialize(ref SpawnHeight);
+		  stream.Serialize(ref PickupsAmount);
 	  }
 
   }

@@ -41,36 +41,66 @@ MonoBehaviour:
         Id:
           Value: 5
       ResourcePath: DB/Configs/SimulationConfig
-    - Path: Resources/DB/PlayerEntity|EntityView
+    - Path: Resources/DB/Food/FoodEntity 1|EntityView
+      AssetRef:
+        Id:
+          Value: 517517722416227650
+      ResourcePath: DB/Food/FoodEntity 1
+    - Path: Resources/DB/Food/FoodEntity 2|EntityView
+      AssetRef:
+        Id:
+          Value: 724284673255688863
+      ResourcePath: DB/Food/FoodEntity 2
+    - Path: Resources/DB/Food/FoodEntity 3|EntityView
+      AssetRef:
+        Id:
+          Value: 1470702682318345712
+      ResourcePath: DB/Food/FoodEntity 3
+    - Path: Resources/DB/Food/FoodEntity 1|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 1494981668970571162
+      ResourcePath: DB/Food/FoodEntity 1
+    - Path: Resources/DB/Food/FoodEntity 2|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 1569494205033078664
+      ResourcePath: DB/Food/FoodEntity 2
+    - Path: Resources/DB/Players/PlayerEntity|EntityView
       AssetRef:
         Id:
           Value: 1654094093889087670
-      ResourcePath: DB/PlayerEntity
+      ResourcePath: DB/Players/PlayerEntity
     - Path: Resources/DB/Map1
       AssetRef:
         Id:
           Value: 1710471675203725834
       ResourcePath: DB/Map1
-    - Path: Resources/DB/FoodEntity|EntityView
+    - Path: Resources/DB/Food/FoodEntity 0|EntityView
       AssetRef:
         Id:
           Value: 2355544724083064382
-      ResourcePath: DB/FoodEntity
-    - Path: Resources/DB/PlayerEntity|EntityPrototype
+      ResourcePath: DB/Food/FoodEntity 0
+    - Path: Resources/DB/Players/PlayerEntity|EntityPrototype
       AssetRef:
         Id:
           Value: 2357332761706826755
-      ResourcePath: DB/PlayerEntity
+      ResourcePath: DB/Players/PlayerEntity
+    - Path: Resources/DB/Food/FoodEntity 3|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 2627710492938227866
+      ResourcePath: DB/Food/FoodEntity 3
     - Path: Resources/DB/Map1_mesh
       AssetRef:
         Id:
           Value: 3193928688549920171
       ResourcePath: DB/Map1_mesh
-    - Path: Resources/DB/FoodEntity|EntityPrototype
+    - Path: Resources/DB/Food/FoodEntity 0|EntityPrototype
       AssetRef:
         Id:
           Value: 3628059125458403757
-      ResourcePath: DB/FoodEntity
+      ResourcePath: DB/Food/FoodEntity 0
     - Path: Resources/DB/BoxStaticCollider|EntityPrototype
       AssetRef:
         Id:

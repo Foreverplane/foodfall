@@ -8,7 +8,7 @@ public class ServerData : IInitializable, ITickable {
 	public readonly ReactiveProperty<FP> PrepareTime = new ReactiveProperty<FP>();
 	public readonly ReactiveProperty<FP> RemainingTime = new ReactiveProperty<FP>();
 	public readonly ReactiveProperty<GameState> GameState = new ReactiveProperty<GameState>();
-
+	
 	public void Initialize() {
 		QuantumCallback.SubscribeManual(this, (CallbackGameStarted c) => OnGameStarted(c.Game));
 		QuantumEvent.SubscribeManual<EventSwitchGameState>(this, SwitchGameState);
@@ -32,5 +32,7 @@ public class ServerData : IInitializable, ITickable {
 		var gameTime = verifiedGlobal->GameTime;
 		RemainingTime.Value = framesVerified.RuntimeConfig.GameTime + framesVerified.RuntimeConfig.PrepareTime - elapsedTime;
 		PrepareTime.Value = gameState == Quantum.GameState.Prepare ? framesVerified.RuntimeConfig.PrepareTime - elapsedTime : PrepareTime.Value;
+		
 	}
+
 }

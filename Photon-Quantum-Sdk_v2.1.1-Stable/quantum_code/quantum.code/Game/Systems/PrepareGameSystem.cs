@@ -5,6 +5,7 @@ public unsafe class PrepareGameSystem : SystemMainThread{
 	public override void OnInit(Frame f) {
 		f.Global->GameState = GameState.Prepare;
 		f.SystemDisable<MovementSystem>();
+		f.SystemDisable<PickupSystem>();
 	}
 	public override void Update(Frame f)
 	{
@@ -18,7 +19,7 @@ public unsafe class PrepareGameSystem : SystemMainThread{
 		if (!f.IsVerified)
 			return;
 		f.SystemDisable<PrepareGameSystem>();
-
+		f.SystemEnable<PickupSystem>();
 		f.SystemEnable<MovementSystem>();
 		f.Global->GameState = GameState.Running;
 		f.Global->GameTime = 0;

@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem.UI;
 using Debug = UnityEngine.Debug;
 using UI = UnityEngine.UI;
 
@@ -29,7 +30,7 @@ public class QuantumStats : MonoBehaviour {
     var eventSystems = FindObjectsOfType<EventSystem>();
     if (eventSystems == null || eventSystems.Length == 0) {
       gameObject.AddComponent<EventSystem>();
-      gameObject.AddComponent<StandaloneInputModule>();
+      gameObject.AddComponent<InputSystemUIInputModule>();
     }
     
     SetState(StartEnabled);

@@ -8,3 +8,4 @@ synced event PrepareGame{
     FP GameStartTime;
 }
 
+signal ChangePlayerScore(Int32 score, PlayerRef playerID);
