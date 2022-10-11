@@ -1,10 +1,28 @@
-# FoodFall
+# Description
 
-## Concept
+Made with Photon Quantum. I requested a trial version from Exit Games.
+
+Build in the root of the archive in the archive of the same name.
+
+You can see the source code for the client here:
+Photon-Quantum-Sdk_v2.1.1-Stable\quantum_unity\Assets\Scripts\
+You can start with GameInstaller.
+
+(I reused what Quantum already had out of the box without any special edits. For good - remake everything under Zenject compatible logic.)
+
+On the server side, the sources can be viewed here: in Photon-Quantum-Sdk_v2.1.1-Stable\quantum_code\
+You can start from the Game folder
+
+
+# Task
+
+## FoodFall
+
+### Concept
 Foodfall will be a game where multiple players compete in real-time to catch the
 most falling food items before time runs out!
 
-## User experience
+### User experience
 
 After launching the game, player will land on a Start screen. There is an input field in
 which the player can enter a name, and a drop list box to select region (if
@@ -35,7 +53,7 @@ which one to award it to.
 After the timer expires, the gameplay will stop and the players will see a sorted list
 of the scores, and a Finish button which takes them back to the start screen.
 
-## Parameters
+### Parameters
 
 - Game must be built in Unity using no older than version 2019 LTE.
 - Choice of server technology is left to the developer, however it is
